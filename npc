@@ -1,0 +1,41 @@
+'''
+DORIAN LAWTON
+
+This code creates the blueprint for the NPC's in "Skip to the Loo"
+
+I certify that this code is mine, and mine alone, in accordance with
+GVSU academic honesty policy.
+
+11/15/24
+'''
+
+import random
+class NPC:
+   def __init__(self, name, phrase):
+       self.__name = name
+       self.__phrase = phrase
+
+   # GETTERS
+
+   # Returns the NPC's name
+   def get_name(self):
+       return self.__name
+
+   # Returns the NPC's phrase
+   def get_phrase(self):
+       return self.__phrase
+
+   # SETTERS
+
+   # Update the NPC's phrase
+   def set_phrase(self, phrase):
+       self.__phrase = phrase
+
+   # Update the NPC's name
+   def set_name(self, name):
+       self.__name = name
+
+   # SPEAK FUNCTION
+   # Return the NPC's speech
+   def speak(self):
+       return f'{self.__name} says, "{self.__phrase[random.randint(0,len(self.__phrase))]}"'
